@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+//import Home from'./componentes/Home'
+//import Login from './componentes/Login';
+//import Form from './componentes/Form';
+//import Mascotas from './componentes/Mascotas';
+import Recuperar from './componentes/RecuperarContraseña';
 import './App.css';
+import { Import } from 'lucide-react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Recuperar/>
     </div>
   );
 }
