@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 
+
 const PrivateRoutePropietario = () => {
   const [loading, setLoading] = useState(true);
   const [autorizado, setAutorizado] = useState(false);

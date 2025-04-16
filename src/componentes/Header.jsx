@@ -3,6 +3,7 @@ import { FaUser,  FaBars } from 'react-icons/fa';
 import '../stylos/Header.css'
 import { Link } from 'react-router-dom';
 
+
 const  Header = () => {
   const toggleMobileMenu = () => {
     // Lógica para mostrar/ocultar el menú móvil

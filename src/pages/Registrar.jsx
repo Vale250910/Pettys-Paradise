@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 import "../stylos/Registrar.css"
 
+
 export default function Registrar() {
   const navigate = useNavigate()
   const {

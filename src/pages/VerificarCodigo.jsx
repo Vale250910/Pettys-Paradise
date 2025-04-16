@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import "../stylos/Login.css";
 
+
 function VerificarCodigo({ email }) {
   console.log("VerificarCodigo renderizado");
   console.log("Email en VerificarCodigo:", email);

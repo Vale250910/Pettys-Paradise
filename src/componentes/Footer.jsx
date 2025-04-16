@@ -3,6 +3,7 @@ import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaFacebookF, FaTwitter, F
 import '../stylos/Footer.css';
 import { Link } from 'react-router-dom';
 
+
 const Footer = () => {
   return (
     <footer className="footer">

@@ -9,6 +9,7 @@ const PropietarioDashboard = () => {
     apellido: "",
     email: "",
   })
+  
 
   useEffect(() => {
     // Cargar datos del usuario desde localStorage

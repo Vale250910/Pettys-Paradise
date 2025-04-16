@@ -11,6 +11,7 @@ import PrivateRoutePropietario from "./PrivateRoutePropietario";
 
 
 
+
 const AppRoutes = () => {
   return (
     <Routes>

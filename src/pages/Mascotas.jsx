@@ -7,6 +7,7 @@ import "../stylos/Mascotas.css"
 import Swal from "sweetalert2"
 import { PawPrint, Upload, User, Dog, Award, Calendar, Weight, CreditCard } from "lucide-react"
 
+
 function FormularioMascota() {
   const {
     register,
