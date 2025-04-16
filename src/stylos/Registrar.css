@@ -1,0 +1,314 @@
+:root {
+    --primary-color: #0a5483;
+    --primary-light: #1976b2;
+    --primary-dark: #073e61;
+    --primary-gradient: linear-gradient(135deg, #0a5483 0%, #1976b2 100%);
+    --secondary-color: #e8f4fc;
+    --text-color: #333333;
+    --text-light: #666666;
+    --error-color: #e53935;
+    --success-color: #43a047;
+    --border-color: #e0e0e0;
+    --input-bg: #f9f9f9;
+    --shadow-color: rgba(10, 84, 131, 0.2);
+    --white: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    height: 100vh;
+  }
+  
+  /* Estructura principal */
+  .register-main {
+    display: flex;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Columna izquierda */
+  .iz-side {
+    flex: 1;
+    background: var(--primary-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .iz-side::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .iz-side::after {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    left: -150px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  
+  .logo-container {
+    max-width: 400px;
+    width: 100%;
+    z-index: 2;
+    padding: 2rem;
+  }
+  
+  .login-logo {
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+  }
+  
+  /* Columna derecha */
+  .der-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--white);
+  }
+  
+  /* Contenedor del formulario */
+  .register-container {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .form-container {
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow-color);
+    overflow: hidden;
+    padding: 2rem;
+  }
+  
+  /* Encabezado del formulario */
+  .form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .icon-container {
+    background-color: var(--primary-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
+  }
+  
+  .icon-paw {
+    color: var(--white);
+    width: 30px;
+    height: 30px;
+  }
+  
+  .form-header h1 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-header p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+  
+  /* Cuerpo del formulario */
+  .form-body {
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .label-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .icon-small {
+    width: 18px;
+    height: 18px;
+    color: var(--primary-color);
+    margin-right: 8px;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--input-bg);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(25, 118, 178, 0.2);
+  }
+  
+  .error-message {
+    display: block;
+    color: var(--error-color);
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+  
+  /* Checkbox de términos */
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  
+  .checkbox-group input {
+    margin-right: 10px;
+    width: auto;
+  }
+  
+  .checkbox-group label {
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+  
+  /* Pie del formulario */
+  .form-footer {
+    text-align: center;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .button-prev {
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
+  
+  .button-prev:hover {
+    background-color: rgba(10, 84, 131, 0.05);
+  }
+  
+  .button-next,
+  .button-submit {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+  
+  .button-next:hover,
+  .button-submit:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+  }
+  
+  .login-link {
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+  
+  .login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .register-main {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .der-side {
+      padding: 1rem;
+      flex: none;
+    }
+    
+    
+    
+    .der-side {
+      width: 100%;
+    }
+    
+    .logo-container {
+      max-width: 250px;
+      margin-bottom: 1rem;
+    }
+    
+    .form-container {
+      padding: 1.5rem;
+      box-shadow: none;
+    }
+    
+   
+  }
+  
+  /* Efectos para los pasos */
+  [style*="display: none"] {
+    display: none !important;
+  }

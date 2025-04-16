@@ -1,17 +1,13 @@
-//import Home from'./componentes/Home'
-//import Login from './componentes/Login';
-//import Form from './componentes/Form';
-//import Mascotas from './componentes/Mascotas';
-import Recuperar from './componentes/RecuperarContraseña';
-import './App.css';
-import { Import } from 'lucide-react';
+import { BrowserRouter } from "react-router-dom"
+import AppRoutes from "./routes/AppRoutes"
+import "./App.css"
 
 function App() {
   return (
-    <div className="App">
-      <Recuperar/>
-    </div>
-  );
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

@@ -1,59 +1,17 @@
 import React from 'react';
-import { FaPaw, FaUser, FaChevronRight, FaBars, FaShieldAlt, FaHeart, FaStethoscope, FaCut, FaPills, FaFileMedical, FaHome, FaCheck, FaBookMedical, FaCalendarAlt, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaArrowRight } from 'react-icons/fa';
-import { FaArrowRight as FaArrowRightSolid } from 'react-icons/fa';
+import { FaPaw, FaUser, FaChevronRight,  FaShieldAlt, FaHeart, FaStethoscope, FaCut, FaPills, FaFileMedical, FaHome, FaCheck, FaBookMedical, FaCalendarAlt, FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaFacebookF, FaTwitter, FaInstagram, FaArrowRight } from 'react-icons/fa';
 import '../stylos/Home.css'
+import '../stylos/Base.css'
+import { Link } from 'react-router-dom';
 
 
-const AkesoVeterinaria = () => {
-  const toggleMobileMenu = () => {
-    // Lógica para mostrar/ocultar el menú móvil
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenu.classList.toggle('active');
-  };
+const Home = () => {
+  
+  
 
   return (
     <div className="akeso-veterinaria">
-      {/* Header */}
-      <header className="header">
-        <div className="container">
-          <div className="header-content">
-            <div className="logo">
-              <img src="https://raw.githubusercontent.com/Vale250910/mascotas_app1/refs/heads/main/img/logo.png" alt="Cakeso Veterinary Clinic" />
-            </div>
-
-            <nav className="desktop-nav">
-              <a href="#inicio" className="nav-link active">Inicio</a>
-              <a href="#servicios" className="nav-link">Servicios</a>
-              <a href="#nosotros" className="nav-link">Nosotros</a>
-              <a href="#blog" className="nav-link">Blog</a>
-              <a href="#contacto" className="nav-link">Contacto</a>
-              <button className="btn btn-primary">
-                <FaUser /> Inicio de Sesión
-              </button>
-            </nav>
-
-            <button className="menu-toggle" id="menuToggle" onClick={toggleMobileMenu}>
-              <FaBars />
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        <div className="mobile-menu" id="mobileMenu">
-          <nav className="mobile-nav">
-            <a href="#inicio" className="nav-link">Inicio</a>
-            <a href="#servicios" className="nav-link">Servicios</a>
-            <a href="#nosotros" className="nav-link">Nosotros</a>
-            <a href="#blog" className="nav-link">Blog</a>
-            <a href="#contacto" className="nav-link">Contacto</a>
-            <button className="btn btn-primary btn-full">
-              <FaUser /> Inicio de sesión
-            </button>
-          </nav>
-        </div>
-      </header>
-
-      <main>
+      <main >
         {/* Hero Section */}
         <section id="inicio" className="hero-section">
           <div className="hero-bg"></div>
@@ -67,10 +25,9 @@ const AkesoVeterinaria = () => {
                 <h1>Salud y <span className="highlight">bienestar</span> para tu mascota</h1>
                 <p>En Cakeso Veterinary Clinic combinamos experiencia, tecnología y cariño para ofrecer el mejor cuidado a tus compañeros.</p>
                 <div className="button-group">
-                  <button className="btn btn-primary btn-lg">
-                    Agendar una cita
-                    <FaChevronRight />
-                  </button>
+                  <Link to="/login" className="btn btn-primary btn-lg">
+                  Agendar una cita <FaChevronRight />
+                  </Link>
                   <button className="btn btn-outline btn-lg">
                     Nuestros servicios
                   </button>
@@ -116,10 +73,6 @@ const AkesoVeterinaria = () => {
                 <h2>Cuidado integral para tu mascota</h2>
                 <p>Ofrecemos una amplia gama de servicios veterinarios para garantizar la salud y bienestar de tus compañeros.</p>
               </div>
-              <button className="btn btn-outline">
-                Ver todos los servicios
-                <FaArrowRight />
-              </button>
             </div>
 
             <div className="services-grid">
@@ -131,10 +84,9 @@ const AkesoVeterinaria = () => {
                   </div>
                   <h3>Medicina Preventiva</h3>
                   <p>Vacunaciones, chequeos regulares y planes de prevención personalizados para cada etapa de vida.</p>
-                  <button className="btn btn-white-outline">
-                    Saber más
-                    <FaChevronRight />
-                  </button>
+                  <Link to="/login" className="btn btn-white-outline">
+                    Saber más <FaChevronRight />
+                  </Link>
                 </div>
               </div>
               <div className="service-card">
@@ -145,10 +97,9 @@ const AkesoVeterinaria = () => {
                   </div>
                   <h3>Diagnóstico Avanzado</h3>
                   <p>Radiografías digitales, ecografías y análisis de laboratorio con resultados rápidos y precisos.</p>
-                  <button className="btn btn-white-outline">
-                    Saber más
-                    <FaChevronRight />
-                  </button>
+                  <Link to="/login" className="btn btn-white-outline">
+                    Saber más <FaChevronRight />
+                  </Link>
                 </div>
               </div>
               <div className="service-card">
@@ -159,10 +110,9 @@ const AkesoVeterinaria = () => {
                   </div>
                   <h3>Peluquería Canina</h3>
                   <p>Servicios de estética y cuidado del pelaje realizados por profesionales con experiencia.</p>
-                  <button className="btn btn-white-outline">
-                    Saber más
-                    <FaChevronRight />
-                  </button>
+                  <Link to="/login" className="btn btn-white-outline">
+                    Saber más <FaChevronRight />
+                  </Link>
                 </div>
               </div>
               <div className="service-card">
@@ -173,10 +123,9 @@ const AkesoVeterinaria = () => {
                   </div>
                   <h3>Farmacia Veterinaria</h3>
                   <p>Medicamentos de calidad y alimentos especializados para todas las necesidades de tu mascota.</p>
-                  <button className="btn btn-white-outline">
-                    Saber más
-                    <FaChevronRight />
-                  </button>
+                  <Link to="/login" className="btn btn-white-outline">
+                    Saber más <FaChevronRight />
+                  </Link>
                 </div>
               </div>
               <div className="service-card">
@@ -187,10 +136,9 @@ const AkesoVeterinaria = () => {
                   </div>
                   <h3>Cirugía</h3>
                   <p>Procedimientos quirúrgicos con equipos modernos y técnicas mínimamente invasivas.</p>
-                  <button className="btn btn-white-outline">
-                    Saber más
-                    <FaChevronRight />
-                  </button>
+                  <Link to="/login" className="btn btn-white-outline">
+                    Saber más <FaChevronRight />
+                  </Link>
                 </div>
               </div>
               <div className="service-card">
@@ -201,10 +149,9 @@ const AkesoVeterinaria = () => {
                   </div>
                   <h3>Hospitalización</h3>
                   <p>Cuidados intensivos con monitoreo constante en un ambiente tranquilo y confortable.</p>
-                  <button className="btn btn-white-outline">
-                    Saber más
-                    <FaChevronRight />
-                  </button>
+                  <Link to="/login" className="btn btn-white-outline">
+                    Saber más <FaChevronRight />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -304,10 +251,6 @@ const AkesoVeterinaria = () => {
                   </div>
                   <h3>Alimentación saludable para tu mascota</h3>
                   <p>Descubre los mejores consejos para una dieta equilibrada que mantendrá a tu mascota en óptimas condiciones.</p>
-                  <a href="#" className="blog-link">
-                    Leer más
-                    <FaArrowRight />
-                  </a>
                 </div>
               </div>
               <div className="blog-card">
@@ -322,10 +265,6 @@ const AkesoVeterinaria = () => {
                   </div>
                   <h3>Cómo proteger a tu mascota del calor</h3>
                   <p>El verano puede ser peligroso para nuestras mascotas. Aprende cómo mantenerlas frescas y seguras durante los días calurosos.</p>
-                  <a href="#" className="blog-link">
-                    Leer más
-                    <FaArrowRight />
-                  </a>
                 </div>
               </div>
               <div className="blog-card">
@@ -340,10 +279,6 @@ const AkesoVeterinaria = () => {
                   </div>
                   <h3>Guía completa de vacunación para perros y gatos</h3>
                   <p>Todo lo que necesitas saber sobre el calendario de vacunación para mantener a tu mascota protegida contra enfermedades.</p>
-                  <a href="#" className="blog-link">
-                    Leer más
-                    <FaArrowRight />
-                  </a>
                 </div>
               </div>
               <div className="blog-card">
@@ -358,20 +293,10 @@ const AkesoVeterinaria = () => {
                   </div>
                   <h3>Cuidados básicos para mascotas exóticas</h3>
                   <p>Consejos especializados para el cuidado de aves, reptiles y pequeños mamíferos que requieren atención especial.</p>
-                  <a href="#" className="blog-link">
-                    Leer más
-                    <FaArrowRight />
-                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="section-footer">
-              <button className="btn btn-outline">
-                Ver todos los artículos
-                <FaArrowRight />
-              </button>
-            </div>
           </div>
         </section>
 
@@ -383,10 +308,9 @@ const AkesoVeterinaria = () => {
                 <h2>¿Listo para darle a tu mascota el cuidado que merece?</h2>
                 <p>Agenda una cita hoy mismo y déjanos cuidar de la salud de tu compañero.</p>
                 <div className="button-group">
-                  <button className="btn btn-white">
-                    <FaCalendarAlt />
-                    Agendar una cita
-                  </button>
+                  <Link to="/login" className="btn btn-white">
+                  <FaCalendarAlt />Agendar una cita 
+                  </Link>
                 </div>
               </div>
               <div className="cta-image">
@@ -469,84 +393,9 @@ const AkesoVeterinaria = () => {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-column">
-              <div className="footer-logo">
-                <img src="https://raw.githubusercontent.com/Vale250910/mascotas_app1/refs/heads/main/img/logo.png" alt="Cakeso Veterinary Clinic" />
-              </div>
-              <p>Cuidado veterinario de calidad para tus mascotas con un equipo de profesionales comprometidos.</p>
-              <div className="social-links">
-                <a href="#" className="social-link">
-                  <FaFacebookF />
-                </a>
-                <a href="#" className="social-link">
-                  <FaTwitter />
-                </a>
-                <a href="#" className="social-link">
-                  <FaInstagram />
-                </a>
-                <a href="#" className="social-link">
-                  <FaLinkedinIn />
-                </a>
-              </div>
-            </div>
-            <div className="footer-column">
-              <h3>Enlaces Rápidos</h3>
-              <ul className="footer-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h3>Servicios</h3>
-              <ul className="footer-links">
-                <li><a href="#">Medicina Preventiva</a></li>
-                <li><a href="#">Diagnóstico Avanzado</a></li>
-                <li><a href="#">Cirugía</a></li>
-                <li><a href="#">Peluquería Canina</a></li>
-                <li><a href="#">Farmacia Veterinaria</a></li>
-                <li><a href="#">Hospitalización</a></li>
-              </ul>
-            </div>
-            <div className="footer-column">
-              <h3>Contacto</h3>
-              <ul className="footer-contact">
-                <li>
-                  <FaMapMarkerAlt />
-                  <span>Av. Principal 123, Ciudad</span>
-                </li>
-                <li>
-                  <FaPhone />
-                  <span>+123 456 7890</span>
-                </li>
-                <li>
-                  <FaEnvelope />
-                  <span>info@cakesoveterinary.com</span>
-                </li>
-                <li>
-                  <FaClock />
-                  <div>
-                    <p>Lun-Vie: 9am-7pm</p>
-                    <p>Sáb: 9am-2pm</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>© 2024 Cakeso Veterinary Clinic. Todos los derechos reservados.</p>
-          </div>
-        </div>
-      </footer>
     </div>
+    
   );
 };
 
-export default AkesoVeterinaria;
+export default Home;
